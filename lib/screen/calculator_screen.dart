@@ -18,7 +18,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Галина Иванова'), // ← ЗАМЕНИ НА СВОЁ ФИО!
+        title: Text('Галина Полтаракова'), 
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
