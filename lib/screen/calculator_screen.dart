@@ -18,7 +18,21 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Галина Полтаракова'), 
+  title: Text('Твоё ФИО'),
+  leading: IconButton(
+    icon: Icon(Icons.history),
+    onPressed: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => HistoryScreen()),
+      );
+    },
+  ),
+),
+      );
+    },
+  ),
+),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
