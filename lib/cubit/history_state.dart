@@ -1,5 +1,5 @@
 // lib/cubit/history_state.dart
-part of 'history_cubit.dart';
+import '../model/calculation.dart';
 
 abstract class HistoryState {}
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../cubit/cosmic_speed_cubit.dart';
 import '../cubit/cosmic_speed_state.dart';
+import 'history_screen.dart';
 
 class CalculatorScreen extends StatefulWidget {
   @override
@@ -18,21 +19,16 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-  title: Text('Твоё ФИО'),
-  leading: IconButton(
-    icon: Icon(Icons.history),
-    onPressed: () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => HistoryScreen()),
-      );
-    },
-  ),
-),
-      );
-    },
-  ),
-),
+        title: Text('Галина Иванова'), // ← ЗАМЕНИ НА СВОЁ ФИО!
+        leading: IconButton(
+          icon: Icon(Icons.history),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HistoryScreen()),
+            );
+          },
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -65,7 +61,9 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                         onPressed: () {
                           _massController.clear();
                           _radiusController.clear();
-                          _isChecked = false;
+                          setState(() {
+                            _isChecked = false;
+                          });
                           context.read<CosmicSpeedCubit>().emit(CosmicSpeedInitial());
                         },
                         child: Text('Назад к вводу'),

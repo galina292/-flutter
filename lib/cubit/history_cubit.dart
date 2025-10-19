@@ -1,9 +1,7 @@
-// lib/cubit/history_cubit.dart
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../model/calculation.dart';
 import '../database/db_provider.dart';
-
-part 'history_state.dart';
+import 'history_state.dart';
 
 class HistoryCubit extends Cubit<HistoryState> {
   HistoryCubit() : super(HistoryInitial());

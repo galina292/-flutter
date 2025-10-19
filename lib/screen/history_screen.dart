@@ -1,4 +1,3 @@
-// lib/screen/history_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../cubit/history_cubit.dart';
@@ -7,7 +6,6 @@ import '../cubit/history_state.dart';
 class HistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // Создаём Cubit прямо здесь
     return BlocProvider(
       create: (context) => HistoryCubit()..loadHistory(),
       child: Scaffold(

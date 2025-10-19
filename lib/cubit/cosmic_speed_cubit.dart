@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lr4_variant5/model/calculation.dart'; // ← замени на своё имя проекта
-import 'package:lr4_variant5/database/db_provider.dart';
+import '../model/calculation.dart';
+import '../database/db_provider.dart';
 import 'cosmic_speed_state.dart';
 
 class CosmicSpeedCubit extends Cubit<CosmicSpeedState> {
@@ -20,7 +20,6 @@ class CosmicSpeedCubit extends Cubit<CosmicSpeedState> {
     const G = 6.67430e-11;
     final velocity = sqrt(G * mass / radius);
 
-    // Сохраняем в БД
     await DBProvider.db.createCalculation(
       Calculation(mass: mass, radius: radius, velocity: velocity)
     );

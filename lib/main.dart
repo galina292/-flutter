@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'ЛР5: Хранение данных',
       home: BlocProvider(
         create: (context) => CosmicSpeedCubit(),
         child: CalculatorScreen(),
